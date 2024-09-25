@@ -6,10 +6,10 @@ import { usePosts } from '@/store'
 import { useShallow } from 'zustand/shallow'
 
 export default function Filters() {
-  const [sortByYear, setSortByYear] = useState<string>('')
-  const [sortByPrice, setSortByPrice] = useState<string>('')
-  const [sortByBrand, setSortByBrand] = useState<string>('')
-  const [sortByColor, setSortByColor] = useState<string>('')
+  const [sortByYear, setSortByYear] = useState<string>('all')
+  const [sortByPrice, setSortByPrice] = useState<string>('all')
+  const [sortByBrand, setSortByBrand] = useState<string>('all')
+  const [sortByColor, setSortByColor] = useState<string>('all')
 
   const [
     brands,
@@ -51,21 +51,25 @@ export default function Filters() {
   useEffect(() => {
     if (sortByYear === 'desc') {
       handleAscOrDesc('-year')
-    } else {
+    } else if (sortByPrice === 'asc') {
       handleAscOrDesc('year')
+    } else {
+      getAllPosts()
     }
   }, [sortByYear])
 
   useEffect(() => {
     if (sortByPrice === 'desc') {
       handleAscOrDesc('-price')
-    } else {
+    } else if (sortByPrice === 'asc') {
       handleAscOrDesc('price')
+    } else {
+      getAllPosts()
     }
   }, [sortByPrice])
 
   useEffect(() => {
-    if (sortByBrand === 'Все') {
+    if (sortByBrand === 'all') {
       getAllPosts()
     } else {
       handleSortByProp('brand', sortByBrand)
@@ -73,7 +77,7 @@ export default function Filters() {
   }, [sortByBrand])
 
   useEffect(() => {
-    if (sortByColor === 'Все') {
+    if (sortByColor === 'all') {
       getAllPosts()
     } else {
       handleSortByProp('color', sortByColor)
@@ -89,6 +93,7 @@ export default function Filters() {
             value={sortByYear}
             onChange={(e) => setSortByYear(e.target.value)}
           >
+            <option value="all">По умолчанию</option>
             <option value="asc">По возрастанию</option>
             <option value="desc">По убыванию</option>
           </select>
@@ -100,6 +105,7 @@ export default function Filters() {
             value={sortByPrice}
             onChange={(e) => setSortByPrice(e.target.value)}
           >
+            <option value="all">По умолчанию</option>
             <option value="asc">По возрастанию</option>
             <option value="desc">По убыванию</option>
           </select>
@@ -111,7 +117,7 @@ export default function Filters() {
             value={sortByBrand}
             onChange={(e) => setSortByBrand(e.target.value)}
           >
-            <option value="Все">Все</option>
+            <option value="all">Все</option>
             {brands.map((brand) => (
               <option value={brand} key={brand}>
                 {brand}
@@ -126,7 +132,7 @@ export default function Filters() {
             value={sortByColor}
             onChange={(e) => setSortByColor(e.target.value)}
           >
-            <option value="Все">Все</option>
+            <option value="all">Все</option>
             {colors.map((color) => (
               <option value={color} key={color}>
                 {color}

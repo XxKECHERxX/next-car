@@ -67,15 +67,15 @@
       "color": "красный"
     },
     {
-      "id": "24e6bc2c-44c6-4685-9edb-841032e117c5",
+      "id": "06951d95-607b-479e-b483-c1c9ae289932",
       "brand": "Lada",
-      "model": "Supra",
+      "model": "Super",
       "year": "2008",
-      "price": "5000",
-      "transmission": "Роботизированная",
+      "price": "8000",
+      "transmission": "Ручная",
       "engine": "Бензиновый",
       "image": "/uploads/j9d3bzdhiiryk6vscdflsol3obhnu9iy.jpg",
-      "color": "серый"
+      "color": "серо-черный"
     }
   ]
 }

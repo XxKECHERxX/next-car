@@ -22,7 +22,7 @@ export default function FormAddCar() {
   return (
     <>
       <form className={styles.formAddCar} action={createPost}>
-        <h2>Добавить автомобиль</h2>
+        <h3>Добавить автомобиль</h3>
         <label>
           <input type="text" placeholder="Бренд" name="brand" required />
           <input type="text" placeholder="Модель" name="model" required />
@@ -76,7 +76,7 @@ export default function FormAddCar() {
             disabled={distanceON}
             name="distance"
           />
-          *доступен только для типа двигателя "Электрический"
+          <h4>*доступен только для типа двигателя "Электрический"</h4>
         </label>
 
         <label>
@@ -90,7 +90,7 @@ export default function FormAddCar() {
           <input type="file" name="file" accept="image/*" />
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Добавить</button>
       </form>
     </>
   )

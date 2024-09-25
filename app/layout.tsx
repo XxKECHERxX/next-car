@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navigation from '@/components/Navigation'
 import { Roboto } from 'next/font/google'
-
+import Navigation from '@/components/Navigation'
+import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
   title: 'NextCar',
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: '400'
+  weight: '400',
 })
 
 export default function RootLayout({
@@ -21,10 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
+        <Providers>
           <Navigation />
           {children}
+        </Providers>
       </body>
     </html>
   )
 }
-

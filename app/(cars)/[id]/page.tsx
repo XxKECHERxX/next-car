@@ -17,8 +17,12 @@ async function getPostById(id: string) {
   try {
     const response = axios.get(`http://localhost:3001/cars/${id}`)
     return await response
-  } catch (error: any) {
-    console.error(error.message)
+  } catch (error: unknown) {
+    if (axios.isAxiosError(error)) {
+      console.error('Axios error:', error.message)
+    } else {
+      console.error('Unexpected error:', error)
+    }
   }
 }
 

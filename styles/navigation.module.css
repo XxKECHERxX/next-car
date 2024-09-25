@@ -9,7 +9,7 @@
 
   border-radius: 15px;
   border: solid 2px #000;
-  box-shadow: #bbb0a6 30px 20px;
+  box-shadow: #bbb0a6 30px 10px;
 }
 
 .navigation span {
@@ -17,6 +17,27 @@
 }
 
 .navigation a {
+  display: flex;
+  align-items: center;
+  height: 40px;
   text-decoration: none;
   color: #000;
+}
+
+.navigation a:hover {
+  border-bottom: solid 2px #bbb0a6;
+  border-top: solid 2px #bbb0a6;
+  color: #000;
+}
+
+.userLogIn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+}
+
+.userName {
+  border-right: solid 2px;
+  padding-right: 40px;
 }
