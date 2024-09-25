@@ -1,0 +1,26 @@
+{
+  "cars": [
+    {
+      "id": "a55d2254-4ab9-4cf3-8b79-6f03b25ddd9b",
+      "brand": "Mercedes",
+      "model": "ыпы",
+      "year": "1999",
+      "price": "4",
+      "transmission": "Автоматическая",
+      "engine": "Бензиновый",
+      "image": "W29iamVjdCBGaWxlXQ==",
+      "color": "серый"
+    },
+    {
+      "id": "4b333517-f30e-4941-9ea3-3cb1be022e3d",
+      "brand": "Lada",
+      "model": "Granta",
+      "year": "1999",
+      "price": "115",
+      "transmission": "Ручная",
+      "engine": "Бензиновый",
+      "image": "W29iamVjdCBGaWxlXQ==",
+      "color": "красный"
+    }
+  ]
+}

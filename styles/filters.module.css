@@ -1,0 +1,16 @@
+.filters {
+  border: solid 2px #000;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: #ded2c6 15px 10px;
+}
+
+.filters form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters form select {
+  margin-left: 10px;
+}

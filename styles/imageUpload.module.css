@@ -1,0 +1,13 @@
+.upload {
+  grid-template-columns: 1fr;
+  height: 45px;
+  border-radius: 10px;
+  border: solid 1px #000;
+  cursor: pointer;
+  background-color: #dddcdc93;
+}
+
+.upload input {
+  display: none;
+  margin-bottom: 10px;
+}
