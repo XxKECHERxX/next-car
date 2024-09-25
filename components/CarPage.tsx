@@ -1,4 +1,5 @@
 import styles from '../styles/carPage.module.css'
+import Image from 'next/image'
 
 export interface ICar {
   id: string
@@ -16,10 +17,14 @@ export interface ICar {
 export default async function CarPage(car: ICar) {
   return (
     <section className={styles.carPage}>
-      <img
-        src={`data:image/jpeg;base64,${car.image}`}
-        alt={`${car.brand} ${car.model}`}
-      />
+      <div className={styles.carPhoto}>
+        <Image
+          src={car.image}
+          alt={`${car.brand} ${car.model}`}
+          fill
+          priority
+        />
+      </div>
 
       <ul>
         <li>

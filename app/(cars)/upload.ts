@@ -1,18 +1,13 @@
-'use client'
+'use server'
+import fs from 'node:fs/promises'
+import { revalidatePath } from 'next/cache'
 
-export const toBase64 = (file: File): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader()
-    reader.onloadend = () => {
-      if (typeof reader.result === 'string') {
-        resolve(reader.result.split(',')[1]) // Извлекаем только base64 часть
-      } else {
-        reject(new Error('FileReader result is not a string'))
-      }
-    }
-    reader.onerror = (error) => {
-      reject(error)
-    }
-    reader.readAsDataURL(file) // Чтение файла как Data URL
-  })
+export async function uploadFile(formData: FormData) {
+  const file = formData.get('file') as File
+  const arrayBuffer = await file.arrayBuffer()
+  const buffer = new Uint8Array(arrayBuffer)
+
+  await fs.writeFile(`./public/uploads/${file.name}`, buffer)
+
+  revalidatePath('/')
 }

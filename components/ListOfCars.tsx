@@ -2,6 +2,7 @@
 
 import styles from '../styles/listOfCars.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ICar } from './CarPage'
 import { usePosts } from '@/store'
 import { useShallow } from 'zustand/shallow'
@@ -20,15 +21,23 @@ export default function ListOfCars() {
     <section className={styles.listOfCars}>
       {cars.map((post: ICar) => (
         <Link href={`./${post.id}`} key={post.id} className={styles.post}>
-          <img src={post.image} />
+          <div className={styles.carPhoto}>
+            <Image
+              src={post.image}
+              alt={`${post.brand} ${post.model}`}
+              fill
+              sizes="50vw, 100vw"
+              priority
+            />
+          </div>
 
-          <div>
-            <h4>{post.brand}</h4>
-            <h4>{post.model}</h4>
+          <div className={styles.info}>
+            <div>{post.brand}</div>
+            <div>{post.model}</div>
             <br />
-            <h4>Год: {post.year}</h4>
+            <div>Год: {post.year}</div>
             <br />
-            <h4>{post.price} $</h4>
+            <div>Цена: {post.price} $</div>
           </div>
         </Link>
       ))}

@@ -1,26 +1,81 @@
 {
   "cars": [
     {
-      "id": "a55d2254-4ab9-4cf3-8b79-6f03b25ddd9b",
-      "brand": "Mercedes",
-      "model": "ыпы",
-      "year": "1999",
-      "price": "4",
+      "id": "5bf1e4c6-ded7-4098-afd0-e41f510eb75e",
+      "brand": "BMW",
+      "model": "i8",
+      "year": "2022",
+      "price": "10000",
       "transmission": "Автоматическая",
       "engine": "Бензиновый",
-      "image": "W29iamVjdCBGaWxlXQ==",
-      "color": "серый"
+      "image": "/uploads/bmw-m-series-seo-overview-ms-04.jpg",
+      "color": "белый"
     },
     {
-      "id": "4b333517-f30e-4941-9ea3-3cb1be022e3d",
-      "brand": "Lada",
-      "model": "Granta",
-      "year": "1999",
-      "price": "115",
+      "id": "1bba9ce3-efd3-4c3b-8fd8-57e53dca0b98",
+      "brand": "Mercedes",
+      "model": "c63",
+      "year": "2024",
+      "price": "75000",
+      "transmission": "Ручная",
+      "engine": "Дизельный",
+      "image": "/uploads/mercedes-450S.jpg",
+      "color": "черный"
+    },
+    {
+      "id": "b01c47ec-5990-42da-bebd-1ee4a3b85764",
+      "brand": "Geely",
+      "model": "Monjaro",
+      "year": "2020",
+      "distance": "10000",
+      "price": "25000",
+      "engine": "Электрический",
+      "image": "/uploads/ffc8fc58ccea669654eee50e6cbf3ca9.jpg",
+      "color": "черный"
+    },
+    {
+      "id": "1fcb97bd-4d25-4041-a4bb-56a3240527c7",
+      "brand": "Mercedes",
+      "model": "w202",
+      "year": "1996",
+      "price": "15000",
       "transmission": "Ручная",
       "engine": "Бензиновый",
-      "image": "W29iamVjdCBGaWxlXQ==",
+      "image": "/uploads/9a5476u-960.jpg",
+      "color": "черный"
+    },
+    {
+      "id": "def44e3f-765d-4930-9e59-ecf5f2722dbd",
+      "brand": "Mercedes",
+      "model": "c55",
+      "year": "2024",
+      "price": "47000",
+      "transmission": "Роботизированная",
+      "engine": "Дизельный",
+      "image": "/uploads/mercedes-benz-e-class-w213-mobile.jpg",
+      "color": "черный"
+    },
+    {
+      "id": "e2b6dabf-523a-4694-97ab-85239c96de02",
+      "brand": "Lada",
+      "model": "Granta",
+      "year": "2015",
+      "distance": "5000",
+      "price": "12000",
+      "engine": "Электрический",
+      "image": "/uploads/cq5dam.resized.img_.1680.large_.time1651041559906-e1660315595954-728x409.jpg",
       "color": "красный"
+    },
+    {
+      "id": "24e6bc2c-44c6-4685-9edb-841032e117c5",
+      "brand": "Lada",
+      "model": "Supra",
+      "year": "2008",
+      "price": "5000",
+      "transmission": "Роботизированная",
+      "engine": "Бензиновый",
+      "image": "/uploads/j9d3bzdhiiryk6vscdflsol3obhnu9iy.jpg",
+      "color": "серый"
     }
   ]
 }

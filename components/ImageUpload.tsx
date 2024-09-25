@@ -1,38 +1,13 @@
-import { useState } from 'react'
-import styles from '../styles/imageUpload.module.css'
+'use client'
+import { uploadFile } from '@/app/(cars)/actions'
 
-const ImageUploader = () => {
-  const [imageData, setImageData] = useState(null)
-
-  const handleFileChange = (event) => {
-    const file = event.target.files[0]
-    if (file) {
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        // Преобразуем в base64
-        const base64data = reader.result
-        // Сохраняем в state в формате JSON
-        setImageData({ image: base64data })
-      }
-      reader.readAsDataURL(file)
-    }
-  }
-
+export default function UploadForm() {
   return (
-    <form>
-      <label className={styles.upload}>
-        Загрузить фото
-        <input type="file" accept="image/*" onChange={handleFileChange} />
+    <form action={uploadFile}>
+      <label>
+        <input type="file" name="file" accept="image/*" />
       </label>
-      {imageData && (
-        <img
-          src={imageData.image}
-          alt="Uploaded"
-          style={{ maxWidth: '100%', height: 'auto' }}
-        />
-      )}
+      <button type="submit">Submit</button>
     </form>
   )
 }
-
-export default ImageUploader

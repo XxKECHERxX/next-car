@@ -11,9 +11,16 @@
   padding: 20px;
 }
 
-.carPage img {
-  width: 400px;
-  height: 300px;
+.carPhoto {
+  position: relative;
+  object-fit: contain;
+  width: auto;
+  height: 250px;
+}
+
+.carPhoto img {
+  border-radius: 15px;
+
 }
 
 .carPage ul {
@@ -25,12 +32,4 @@
   align-items: center;
   list-style-type: none;
   margin: 10px 0;
-}
-
-.colorSquare {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-
-  border: solid 1px #000;
 }
