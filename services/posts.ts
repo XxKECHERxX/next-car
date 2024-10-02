@@ -18,22 +18,3 @@ export async function getAllPosts(
     return undefined
   }
 }
-
-// const models = async () => {
-//   const response = await getAllPosts('');
-//   return response?.map(car => car.model);
-// };
-
-// const getModels = async () => {
-//   const result = await models();
-//   console.log(result);
-// };
-
-// getModels();
-
-
-// export const getSortedPosts = async (field: string, order: string)=> {
-//   return await getAllPosts(`_sort=${field}&_order=${order}`)
-// }
-
-// export const getSortedByModel = (field: string) => getAllPosts(`brand=${field}`)
